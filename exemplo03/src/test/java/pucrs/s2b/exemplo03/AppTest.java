@@ -32,4 +32,22 @@ public class AppTest {
 		String actual = Medias.calcular(3.0, 3.0);
 		assertEquals(expected, actual);
 	}
+	
+	
+	
+	@Test
+	public void Three99AndThree99GivesRep()
+	{
+		String expected = "Reprovado";
+		String actual = Medias.calcular(3.9, 3.9);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void Three99AndFour01GivesRep()
+	{
+		String expected = "Em exame";
+		String actual = Medias.calcular(3.999, 4.001);
+		assertEquals(expected, actual);
+	}
 }
